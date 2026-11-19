@@ -10,3 +10,5 @@ async function call(path: string, body?: unknown): Promise<void> {
 export const quarantine = async (id: string, labelId: string) => { await call(`${id}/modify`, { addLabelIds: [labelId] }); await call(`${id}/trash`); };
 export const restore = async (id: string) => { await call(`${id}/untrash`); await call(`${id}/modify`, { addLabelIds: ['INBOX'] }); };
 export const archiveWithLabel = (id: string, labelId: string) => call(`${id}/modify`, { addLabelIds: [labelId], removeLabelIds: ['INBOX'] });
+export const labelOnly = (id: string, labelId: string) => call(`${id}/modify`, { addLabelIds: [labelId] });
+export const toInbox = (id: string) => call(`${id}/modify`, { addLabelIds: ['INBOX'] });
