@@ -11,3 +11,7 @@ button{background:none;border:0;color:var(--fg);padding:10px 14px;text-align:lef
 .row small{color:#8a8f98;display:block}.pill{float:right;padding:1px 8px;border:1px solid}.pill.hi{color:var(--bad)}.pill.lo{color:var(--ok)}
 .insp{padding:14px}.bad{color:var(--bad)}.acts{display:flex;flex-direction:column;gap:8px;margin-top:14px}.acts button{border:1px solid var(--brass);color:var(--brass)}
 @media(max-width:800px){.grid{grid-template-columns:1fr;height:auto}}
+.liveb{color:var(--ok);border-color:var(--ok)}
+.drawer{position:fixed;top:0;right:0;width:340px;height:100%;background:var(--panel);border-left:1px solid var(--brass);padding:18px;display:flex;flex-direction:column;gap:8px;z-index:5}
+.drawer input{background:var(--bg);border:1px solid var(--line);color:var(--fg);padding:8px;font-family:ui-monospace,monospace}
+.drawer .conn{border:1px solid var(--brass);color:var(--brass)}
